@@ -5,7 +5,6 @@ except ImportError:
     import urllib.parse as urlparse  # py3k
 import os
 
-from rospkg.os_detect import OS_CONDA
 from rospkg.os_detect import OS_DEBIAN
 from rospkg.os_detect import OS_FEDORA
 from rospkg.os_detect import OS_OSX

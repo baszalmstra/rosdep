@@ -42,9 +42,11 @@ def register_platforms(context):
 
 
 def conda_detect(packages):
-    # Return empty list - no packages detected as installed
     # This is a stub implementation for package mapping only
-    return []
+    raise NotImplementedError(
+        "Conda installer does not support package detection." \
+        "Please manage conda packages manually in your conda environment."
+    )
 
 
 class CondaInstaller(PackageManagerInstaller):
