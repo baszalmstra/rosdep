@@ -165,14 +165,6 @@ def get_gbprepo_as_rosdep_data(gbpdistro):
                 BREW_INSTALLER: {'packages': [homebrew_name]}
             }
 
-            # Do generation for conda entries
-            # conda package naming follows debian convention: ros-{release}-{package}
-            conda_package_name = 'ros-%s-%s' % (release_name, pkg)
-            conda_package_name = conda_package_name.replace('_', '-')
-            rosdep_data[pkg][OS_CONDA] = {
-                CONDA_INSTALLER: {'packages': [conda_package_name]}
-            }
-
             # - package name: underscores must be dashes
             package_name = 'ros-%s-%s' % (release_name, pkg)
             package_name = package_name.replace('_', '-')
